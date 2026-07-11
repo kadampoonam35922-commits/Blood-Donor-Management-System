@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Blood Donor Management</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+            background:
+                linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1600&auto=format&fit=crop');
+
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            min-height:100vh;
+            color:white;
+        }
+
+        /* Navbar */
+
+        .navbar{
+            width:100%;
+            padding:20px 40px;
+            display:flex;
+            justify-content:flex-end;
+            align-items:center;
+            background:rgba(255,255,255,0.1);
+            backdrop-filter:blur(10px);
+        }
+
+        .navbar a{
+            color:white;
+            text-decoration:none;
+            margin-left:30px;
+            font-size:20px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .navbar a:hover{
+            color:yellow;
+        }
+
+        /* About Section */
+
+        .about-container{
+            width:80%;
+            margin:60px auto;
+            background:rgba(255,255,255,0.1);
+            padding:50px;
+            border-radius:20px;
+            backdrop-filter:blur(10px);
+            box-shadow:0 5px 20px rgba(0,0,0,0.4);
+            animation:fadeIn 2s ease;
+        }
+
+        .about-container h1{
+            text-align:center;
+            font-size:50px;
+            margin-bottom:30px;
+            color:#ffcccc;
+        }
+
+        .about-container p{
+            font-size:22px;
+            line-height:40px;
+            text-align:justify;
+            margin-bottom:20px;
+        }
+
+        .highlight{
+            color:yellow;
+            font-weight:bold;
+        }
+
+        /* Mission Box */
+
+        .mission{
+            margin-top:40px;
+            padding:30px;
+            background:rgba(255,255,255,0.15);
+            border-left:8px solid red;
+            border-radius:15px;
+        }
+
+        .mission h2{
+            margin-bottom:15px;
+            color:#ffb3b3;
+        }
+
+        .mission p{
+            font-size:20px;
+            line-height:35px;
+        }
+
+        /* Animation */
+
+        @keyframes fadeIn{
+            from{
+                opacity:0;
+                transform:translateY(50px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        /* Responsive */
+
+        @media(max-width:768px){
+
+            .about-container{
+                width:90%;
+                padding:30px;
+            }
+
+            .about-container h1{
+                font-size:35px;
+            }
+
+            .about-container p{
+                font-size:18px;
+                line-height:32px;
+            }
+
+            .navbar{
+                justify-content:center;
+            }
+
+            .navbar a{
+                margin:0 10px;
+                font-size:18px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <div class="navbar">
+
+        <a href="{% url 'home' %}">Home</a>
+
+        <a href="{% url 'register' %}">Register</a>
+
+        <a href="{% url 'login' %}">Login</a>
+
+        <a href="{% url 'search' %}">Search</a>
+
+    </div>
+
+    <!-- About Us Content -->
+
+    <div class="about-container">
+
+        <h1>About Us</h1>
+
+        <p>
+            Welcome to the <span class="highlight">Blood Donor Management System</span>.
+            Our platform is designed to connect blood donors with people who need blood urgently.
+            We aim to create a fast, secure, and reliable system for blood donation services.
+        </p>
+
+        <p>
+            Every second counts during medical emergencies. Our website helps hospitals,
+            patients, and donors communicate easily and efficiently. We believe that
+            donating blood is one of the greatest acts of kindness and humanity.
+        </p>
+
+        <p>
+            Through this system, users can register as donors, search for available donors,
+            and help save lives in critical situations.
+        </p>
+
+        <!-- Mission -->
+
+        <div class="mission">
+
+            <h2>Our Mission</h2>
+
+            <p>
+                Our mission is to ensure that no life is lost due to the shortage of blood.
+                We strive to build a community of voluntary blood donors and make blood
+                availability accessible anytime and anywhere.
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
